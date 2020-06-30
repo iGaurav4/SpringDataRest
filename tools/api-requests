@@ -1,0 +1,56 @@
+1) Create Organizer:
+
+URL:
+
+http://localhost:8080/organizers
+
+POST Request Body:
+
+{
+  "name" : "Kumar Gaurav"
+}
+
+
+Create Event with Venue:
+
+URL:
+
+http://localhost:8080/events
+
+
+2) POST Request Body:
+
+{
+  "name" : "Book Reading Event",
+  "description": "The Best Event Ever",
+  "startTime" : "2017-08-29T14:46:18Z",
+  "endTime" : "2017-08-29T16:46:18Z",
+  "zoneId" : "US/Central",
+  "organizer" : "/organizers/1",
+  "venue" : {
+    "name" : "Gaurav Surprising Events INC",
+    "streetAddress" : "12345",
+    "streetAddress2" : "Pallod Farm, Baner",
+    "city" : "Pune",
+    "state" : "Maharashtra",
+    "country" : "INDIA",
+    "postalCode" : "411007"
+  }
+
+}
+
+
+3) Create Particpant:
+
+URL:
+
+http://localhost:8080/participants
+
+POST Request Body:
+
+{
+  "name" : "John ",
+  "email" : "johnf@gmail.com",
+  "event" : "/events/1",
+  "checkedIn":"false"
+}
